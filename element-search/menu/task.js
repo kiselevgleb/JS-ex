@@ -1,18 +1,16 @@
 let menu = document.getElementsByClassName("menu__link");
-console.log(menu[1].parentElement.childNodes.item(3).className);
+let menuActive = document.getElementsByClassName("menu menu_sub");
 
 for (let index = 0; index < menu.length; index++) {
     let element = menu[index];
     element.onclick = function () {
-        if(element.parentElement.childNodes.item(3)!=null){
-            element.parentElement.childNodes.item(3).className="menu menu_sub menu_active";
+        if (element.parentElement.childNodes.item(3) != null) {
+            for (let index = 0; index < menuActive.length; index++) {
+                let element = menuActive[index];
+                element.classList.remove("menu_active");
+            }
+            element.parentElement.childNodes.item(3).classList.add("menu_active");
         }
-<<<<<<< HEAD
-        return false; }
+        return false;
+    }
 }
-
-=======
-    } 
-    
-}
->>>>>>> parent of 8f14496... Update task.js
