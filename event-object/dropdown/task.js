@@ -14,10 +14,9 @@ for (let index = 0; index < dropdownLinks.length; index++) {
     element.onclick = function () {
         let text = dropdownValue.textContent;
         dropdownValue.textContent = element.textContent;
-        console.log(dropdownList.parentElement.textContent);
         element.textContent = text;
-        element.closest("ul").className = "dropdown__list";
         return false;
     }
+    element.closest("ul").classList.remove("dropdown__list_active");
 }
 dropdownList.parentElement.addEventListener("click", dropdownValueClick);
