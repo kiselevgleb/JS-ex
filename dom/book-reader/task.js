@@ -5,14 +5,6 @@ console.log(book);
 console.log(font[0].parentElement);
 console.log(font);
 
-// font[0].parentElement.addEventListener("click", function (e) {
-//     Array.from(font).forEach(element => element.classList.remove("font-size_active"));
-//     console.log(e.target);
-//     book.classList.add("book_fs-small");
-//     e.target.classList.add("font-size_active");
-// return false;
-// });
-
 for (let index = 0; index < font.length; index++) {
     let e = font[index];
     e.onclick = function () {
