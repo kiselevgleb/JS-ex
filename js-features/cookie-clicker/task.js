@@ -19,3 +19,4 @@ function clickCookie(){
     cointSec = (timeEnd-time)/1000;
     clicker_s.textContent=(1/cointSec).toFixed(2);
 }
+cookie.addEventListener("click", clickCookie);
