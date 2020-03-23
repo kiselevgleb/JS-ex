@@ -24,7 +24,7 @@ function pressEnter(e) {
     if (e.code == "Enter" && mestext != null) {
 
         messages.innerHTML += `
-  <div class="message">
+  <div class="message message_client">
     <div class="message__time">11</div>
     <div class="message__text">
       Добрый день, мы ещё не проснулись. Позвоните через 10 лет
@@ -41,13 +41,10 @@ function pressEnter(e) {
 
         textMas[textMas.length - 2].innerHTML = mestext;
         textMas[textMas.length - 2].style.background = "red";
+
         timeMas[timeMas.length - 2].innerHTML = time;
         console.log(mestext);
         console.log(time);
-
-        
-        
-
 
         textMas[textMas.length - 1].innerHTML = masMesAns[coin];
         timeMas[timeMas.length - 1].innerHTML = time;
