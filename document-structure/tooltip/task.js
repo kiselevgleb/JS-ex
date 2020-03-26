@@ -3,13 +3,16 @@ let titleTool = document.querySelector(".tooltip");
 
 title.forEach(element => {
     element.onclick = function () {
-            console.log(element.title);
-            titleTool.textContent=element.title;
+        if (!titleTool.classList.contains("tooltip_active")) {
+            titleTool.textContent = element.title;
             let coords = element.getBoundingClientRect();
             titleTool.style.left = coords.left + "px";
             titleTool.style.top = coords.bottom + "px";
-          
-        titleTool.classList.add("tooltip_active");
-        
+            titleTool.classList.add("tooltip_active");
+        } else {
+            titleTool.classList.remove("tooltip_active");
+
+        }
+        return false;
     }
 });
