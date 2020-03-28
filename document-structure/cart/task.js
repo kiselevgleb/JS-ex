@@ -13,7 +13,7 @@ plus.forEach(element => {
 
 minus.forEach(element => {
     element.onclick = function () {
-        if (Number.parseInt(element.previousSibling.textContent) != 0) {
+        if (Number.parseInt(element.nextElementSibling.textContent) > 1) {
             element.nextElementSibling.textContent = Number.parseInt(element.nextElementSibling.textContent) - 1;
         }
         return false;
